@@ -1,0 +1,428 @@
+/* 1. CSS RESET */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+pre,
+code,
+address,
+variable,
+form,
+fieldset,
+blockquote,
+div,
+section,
+header,
+footer,
+nav,
+article,
+aside {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th,
+caption {
+    font-weight: normal;
+    text-align: left;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+/* 2. CSS BASE */
+/* Importar a fonte Hanken Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&display=swap');
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #F8F9FA;
+    color: #252c32;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #9f3030;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a72323;
+}
+
+/* 3. ESTRUTURA (HEADER, CONTAINER, FOOTER) */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFFFF;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid #9f3030;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #252c32;
+    margin-bottom: 15px;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header nav a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #252c32;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #9f3030;
+    color: #FFFFFF;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    text-align: center;
+    /* height: device-height;
+    width: device-width; */
+    padding: 25px;
+    background-color: #252c32;
+    color: #F8F9FA;
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* 4. ESTILOS DE PÁGINAS ESPECÍFICAS */
+
+/* index.html: Galeria */
+#galeria-destaques {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-galeria {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-galeria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 170px;
+    display: block;
+}
+
+.item-galeria p {
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    background: #F8F9FA;
+    margin: 0;
+    color: #252c32;
+}
+
+/* index.html: Contador */
+#lancamento {
+    text-align: center;
+    background-color: #ffffff;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#contador {
+    font-size: 36px;
+    font-weight: 700;
+    color: #9f3030;
+    margin: 10px 0;
+}
+
+/* viaturas.html: Tabela Responsiva */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#inventario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#inventario caption {
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 15px;
+    font-weight: 700;
+    color: #2C3E50;
+}
+
+#inventario th,
+#inventario td {
+    border: 1px solid #EAECEE;
+    /* Borda mais suave */
+    padding: 12px 15px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+#inventario th {
+    background-color: #252c32;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#inventario .alt {
+    background-color: #F8F9FA;
+}
+
+/* Formulários (Contacto / Financiamento) */
+form {
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #F8F9FA;
+    border-radius: 5px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form input[type="number"]:focus,
+form select:focus,
+form textarea:focus {
+    background-color: #FFF;
+    border-color: #9f3030;
+    box-shadow: 0 0 5px rgba(174, 39, 39, 0.3);
+    outline: none;
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: #9f3030;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #a72323;
+    transform: scale(1.03);
+}
+
+.msgerror {
+    color: #ff1900;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+    display: block;
+}
+
+#resultado-financiamento {
+    font-size: 20px;
+    font-weight: 700;
+    color: #9f3030;
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px;
+    background: #F8F9FA;
+    border-radius: 5px;
+}
+
+#resultado-financiamento.erro {
+    color: #ff1900;
+}
+
+.loc {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.mapa {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* sobre.html: Página de Texto */
+.pagina-texto p {
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+
+.pagina-texto h2 {
+    border-bottom: 2px solid #F0F0F0;
+    padding-bottom: 5px;
+    margin-top: 2px;
+}
+
+.pagina-texto h3 {
+    line-height: 1.7;
+    font-size: 30px;
+    padding-top: 20px;
+    margin-bottom: 7px;
+}
+
+/* 5. MEDIA QUERIES (Responsividade) */
+
+/* Breakpoint para tablets e desktops pequenos */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .logo {
+        margin-bottom: 0;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        width: auto;
+    }
+
+    header nav a {
+        width: auto;
+        margin-bottom: 0;
+        margin-left: 5px;
+        padding: 10px 15px;
+    }
+
+    #galeria-destaques {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .item-galeria {
+        width: 31.5%;
+    }
+
+    .pagina-texto {
+        padding: 0 30px;
+    }
+}
