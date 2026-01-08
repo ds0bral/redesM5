@@ -187,7 +187,7 @@ footer p {
 #galeria-destaques {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .item-galeria {
@@ -201,6 +201,7 @@ footer p {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
+
 
 .item-galeria img {
     width: 100%;
@@ -416,10 +417,6 @@ form button:hover {
     #galeria-destaques {
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    .item-galeria {
-        width: 31.5%;
     }
 
     .pagina-texto {

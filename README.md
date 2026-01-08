@@ -1,2 +1,2 @@
-# redesM5
-Projeto de redes do módulo 5.
+# QualiAuto
+Projeto no ámbito da discplina de Redes de Comunicação 2025/2026.
