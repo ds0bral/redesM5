@@ -1,6 +1,6 @@
 <?php 
 include 'header.php'; 
-verificar_autenticacao(); // Proteção ativa
+verificar_autenticacao(); // Proteção do LOGIN
 ?>
 
 <main class="container my-5">

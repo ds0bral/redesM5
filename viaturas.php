@@ -1,12 +1,11 @@
 <?php 
 include 'header.php'; 
 
-// Requisito: Arrays em PHP para conteúdos
 $stock_viaturas = [
-    ['modelo' => 'TESLA - Modelo X', 'preco' => 35000, 'ano' => 2024],
+    ['modelo' => 'TESLA - Model S', 'preco' => 42000, 'ano' => 2024],
     ['modelo' => 'TESLA - Model 3', 'preco' => 28500, 'ano' => 2023],
-    ['modelo' => 'TESLA - Model Y', 'preco' => 19950, 'ano' => 2021],
-    ['modelo' => 'TESLA - Model S', 'preco' => 42000, 'ano' => 2024]
+    ['modelo' => 'TESLA - Modelo X', 'preco' => 35000, 'ano' => 2024],
+    ['modelo' => 'TESLA - Model Y', 'preco' => 19950, 'ano' => 2021]
 ];
 ?>
 

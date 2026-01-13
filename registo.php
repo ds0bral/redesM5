@@ -3,7 +3,7 @@ include 'header.php';
 $msg = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validação de Token CSRF (Segurança)
+    // Validação de Token
     if (!isset($_POST['csrf']) || $_POST['csrf'] !== $_SESSION['csrf_token']) {
         die("Erro de segurança: Token inválido.");
     }
@@ -13,9 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $erro = false;
 
-    // Adiciona ao array na sessão com Password Criptografada (Hash)
+    // Adiciona ao array na sessão com a password criptografada
     foreach ($_SESSION['lista_utilizadores'] as $utilizador) {
-        // password_verify compara a pass escrita com o hash guardado
+        // Verifica e compara a password escrita com o hash guardado
         if ($utilizador['user'] === $novo_user) {
             $msg = "<div class='alert alert-danger'>O nome de utilizador já existe.</div>";
             $erro = true;

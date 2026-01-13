@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Procura no array de utilizadores
     foreach ($_SESSION['lista_utilizadores'] as $utilizador) {
-        // password_verify compara a pass escrita com o hash guardado
+        // Verifica e compara a password escrita com o hash guardado
         if ($utilizador['user'] === $u_login && password_verify($p_login, $utilizador['pass'])) {
             $_SESSION['sessao_ativa'] = true;
             $_SESSION['user_id'] = $utilizador['user'];

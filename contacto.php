@@ -2,7 +2,7 @@
 include 'header.php'; 
 $msg_feedback = "";
 
-// Validação PHP (Requisito: Validação lado do servidor)
+// Validação PHP
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = trim($_POST['nome']);
     $email = trim($_POST['email']);
